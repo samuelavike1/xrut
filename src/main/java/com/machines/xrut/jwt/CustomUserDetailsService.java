@@ -1,8 +1,8 @@
 package com.machines.xrut.jwt;
 
 
-import com.machines.xrut.entity.User;
-import com.machines.xrut.repository.UserRepository;
+import com.machines.xrut.user.User;
+import com.machines.xrut.user.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

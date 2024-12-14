@@ -1,7 +1,7 @@
 package com.machines.xrut.jwt;
 
 
-import com.machines.xrut.entity.User;
+import com.machines.xrut.user.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

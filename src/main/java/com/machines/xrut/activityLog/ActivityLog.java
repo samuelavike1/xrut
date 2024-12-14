@@ -1,4 +1,4 @@
-package com.machines.xrut.entity;
+package com.machines.xrut.activityLog;
 
 import jakarta.persistence.*;
 import lombok.Getter;

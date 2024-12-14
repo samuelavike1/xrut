@@ -1,10 +1,7 @@
-package com.machines.xrut.service.impl;
+package com.machines.xrut.client;
 
-import com.machines.xrut.dto.clientdto.ClientDto;
-import com.machines.xrut.dto.clientdto.ClientOvaTopUpDto;
-import com.machines.xrut.entity.Client;
-import com.machines.xrut.repository.ClientRepository;
-import com.machines.xrut.service.ClientService;
+import com.machines.xrut.client.clientdto.ClientDto;
+import com.machines.xrut.client.clientdto.ClientOvaTopUpDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

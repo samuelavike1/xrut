@@ -1,10 +1,7 @@
-package com.machines.xrut.controller;
+package com.machines.xrut.auth;
 
-import com.machines.xrut.dto.userdto.LoginDto;
-import com.machines.xrut.dto.userdto.LoginResponseDto;
-import com.machines.xrut.dto.userdto.UserDto;
-import com.machines.xrut.entity.User;
-import com.machines.xrut.service.AuthService;
+import com.machines.xrut.user.User;
+import com.machines.xrut.user.AuthService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,12 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 
-
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
 
-    private AuthService authService;
+    private final AuthService authService;
 
     public AuthController(AuthService authService) {
         this.authService = authService;

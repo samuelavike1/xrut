@@ -1,9 +1,6 @@
-package com.machines.xrut.controller;
+package com.machines.xrut.client;
 
-import com.machines.xrut.dto.clientdto.ClientDto;
-import com.machines.xrut.entity.Client;
-import com.machines.xrut.service.ClientService;
-import jakarta.validation.Valid;
+import com.machines.xrut.client.clientdto.ClientDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

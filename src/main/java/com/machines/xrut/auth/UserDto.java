@@ -1,4 +1,4 @@
-package com.machines.xrut.dto.userdto;
+package com.machines.xrut.auth;
 
 public record UserDto(
         String name,

@@ -1,9 +1,7 @@
-package com.machines.xrut.service;
+package com.machines.xrut.client;
 
-import com.machines.xrut.dto.clientdto.ClientDto;
-import com.machines.xrut.dto.clientdto.ClientOvaTopUpDto;
-import com.machines.xrut.entity.Client;
-import org.springframework.security.core.Authentication;
+import com.machines.xrut.client.clientdto.ClientDto;
+import com.machines.xrut.client.clientdto.ClientOvaTopUpDto;
 
 
 import java.util.Optional;

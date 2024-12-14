@@ -20,8 +20,6 @@ import java.util.function.Function;
 @Service
 public class JWTService {
 
-    private String jwtsecret = "5JzoMbk6E5qIqHSuBTgeQCARtUsxAkBiHwdjXOSW8kWdXzYmP3X51C0";
-
     public String generateToken(String username, Long userId, String role) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("userId", userId);
@@ -39,13 +37,7 @@ public class JWTService {
     }
 
     private SecretKey jwtKey() {
-//        try {
-//            KeyGenerator keyGen = KeyGenerator.getInstance("HmacSHA256");
-//            SecretKey sk = keyGen.generateKey();
-//            jwtsecret = Base64.getEncoder().encodeToString(sk.getEncoded());
-//        } catch (NoSuchAlgorithmException e) {
-//            throw new RuntimeException(e);
-//        }
+        String jwtsecret = "5JzoMbk6E5qIqHSuBTgeQCARtUsxAkBiHwdjXOSW8kWdXzYmP3X51C0";
         return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtsecret));
     }
 

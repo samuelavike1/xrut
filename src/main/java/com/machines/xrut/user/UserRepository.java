@@ -1,6 +1,5 @@
-package com.machines.xrut.repository;
+package com.machines.xrut.user;
 
-import com.machines.xrut.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

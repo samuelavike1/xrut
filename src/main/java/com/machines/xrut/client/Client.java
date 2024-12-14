@@ -1,4 +1,4 @@
-package com.machines.xrut.entity;
+package com.machines.xrut.client;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -11,18 +11,21 @@ import java.time.Instant;
 @Getter
 @Setter
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "clients")
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(unique = true, nullable = false)
+    private String clientId;
     private String name;
-    @Column(unique = true)
+    private String phone;
     private String email;
-    private String username;
-    private String password;
-    private String role;
+    private String address;
+    private Double ova;
+
+    @Column(nullable = false)
+    private String apiKey;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
@@ -31,4 +34,5 @@ public class User {
     @UpdateTimestamp
     @Column(name = "updated_at")
     private Instant updatedAt;
+
 }

@@ -2,7 +2,6 @@ package com.machines.xrut.config;
 
 import com.machines.xrut.ApiKeyAuth.ApiKeyAuthFilter;
 import com.machines.xrut.jwt.JwtFilter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,14 +24,15 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    @Autowired
-    private UserDetailsService userDetailsService;
+    private final UserDetailsService userDetailsService;
+    private final JwtFilter jwtFilter;
+    private final ApiKeyAuthFilter apiKeyAuthFilter;
 
-    @Autowired
-    private JwtFilter jwtFilter;
-
-    @Autowired
-    private ApiKeyAuthFilter apiKeyAuthFilter;
+    public SecurityConfig(UserDetailsService userDetailsService, JwtFilter jwtFilter, ApiKeyAuthFilter apiKeyAuthFilter) {
+        this.userDetailsService = userDetailsService;
+        this.jwtFilter = jwtFilter;
+        this.apiKeyAuthFilter = apiKeyAuthFilter;
+    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {

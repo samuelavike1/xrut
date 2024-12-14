@@ -1,6 +1,5 @@
-package com.machines.xrut.repository;
+package com.machines.xrut.client;
 
-import com.machines.xrut.entity.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

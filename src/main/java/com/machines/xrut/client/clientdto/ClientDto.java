@@ -1,4 +1,4 @@
-package com.machines.xrut.dto.clientdto;
+package com.machines.xrut.client.clientdto;
 
 public record ClientDto(
         String name,

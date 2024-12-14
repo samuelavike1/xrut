@@ -1,12 +1,9 @@
-package com.machines.xrut.service.impl;
+package com.machines.xrut.user;
 
-import com.machines.xrut.dto.userdto.LoginDto;
-import com.machines.xrut.dto.userdto.LoginResponseDto;
-import com.machines.xrut.dto.userdto.UserDto;
-import com.machines.xrut.entity.User;
+import com.machines.xrut.auth.LoginDto;
+import com.machines.xrut.auth.LoginResponseDto;
+import com.machines.xrut.auth.UserDto;
 import com.machines.xrut.jwt.JWTService;
-import com.machines.xrut.repository.UserRepository;
-import com.machines.xrut.service.AuthService;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -23,7 +20,7 @@ public class AuthServiceImpl implements AuthService {
 
     private final JWTService jwtService;
 
-    private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
+    private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 
     public AuthServiceImpl(UserRepository repository, AuthenticationManager authManager, JWTService jwtService) {
         this.repository = repository;
